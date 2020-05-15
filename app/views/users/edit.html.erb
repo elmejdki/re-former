@@ -43,7 +43,7 @@
   <%= submit_tag 'Create User' %>
 <% end %>
  -->
- <%= form_for :user, :url => "/users" do |f| %>
+ <%= form_for @user do |f| %>
   <div>
     <%= f.label :email, 'Your email:' %>
     <%= f.email_field :email, placeholder: 'I don\'t know' %>
@@ -54,7 +54,7 @@
   </div>
   <div>
     <%= f.label :password, 'Your pass:' %>
-    <%= f.password_field :password %>
+    <%= f.text_field :password %>
   </div>
     <%= f.submit 'Create a User' %>
 
