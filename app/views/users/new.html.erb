@@ -1,8 +1,11 @@
 <h1>Create a new User</h1>
+<!-- 
+-------------- Using casual HTML code --------------
 <form 
   method="POST" 
   action="/users" 
   accept-charset="UTF-8">
+
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <div>
     <label for="user_email">Email:</label>
@@ -18,3 +21,31 @@
   </div>
   <input type="submit" value="Create a New User"/>
 </form>
+-->
+<!--
+-------------- Using Form_tag --------------
+<%= form_tag '/users', method:'post' do %>
+  <div>
+    <%= label_tag :email %>
+    <%= email_field_tag :email, nil, placeholder: 'something@gmail.com' %>
+  </div>
+
+  <div>
+    <%= label_tag :username %>
+    <%= text_field_tag :username %>
+  </div>
+
+  <div>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+
+  <%= submit_tag 'Create User' %>
+<% end %>
+ -->
+ <%= form_for :user do |f| %>
+  <div>
+    <%= f.label :email, 'Your email:' %>
+    <%= f.email_field :email, placeholder: 'I don\'t know' %>
+  </div>
+ <% end %>
