@@ -5,7 +5,7 @@ class User < ApplicationRecord
             uniqueness: true,
             format: {
               with: /\S+@\S+\.\S+/,
-              message: "does not conform into a valid email form"
+              message: 'does not conform into a valid email form'
             }
   validates :password, presence: true
 end

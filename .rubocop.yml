@@ -4,6 +4,7 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "Gemfile"
+    - "db/*"
     - "test/**/*"
     - "config/**/*"
     - "bin/*"
