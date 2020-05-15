@@ -1,14 +1,14 @@
 AllCops:
   Exclude:
-    - "README.md"
-    - "Guardfile"
-    - "Rakefile"
-    - "Gemfile"
-    - "db/*"
-    - "test/**/*"
+    - "db/**/*"
+    - "bin/*" 
     - "config/**/*"
-    - "bin/*"
+    - "Guardfile"
+    - "Gemfile"
+    - "Rakefile"
+    - "README.md"
     - "node_modules/**/*"
+    - "test/**/*"
 
   DisplayCopNames: true
 
