@@ -1,0 +1,32 @@
+<% if @user.errors.full_messages.length > 0 %>
+  <div class="errors">
+    <%= pluralize(@user.errors.full_messages.length, 'Error') %> not allowing this form to be submit
+
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.label :email, 'Your email:' %>
+    <%= f.email_field :email, placeholder: 'example@mail.com' %>
+  </div>
+
+  <div>
+    <%= f.label :username, 'Your name:' %>
+    <%= f.text_field :username, placeholder: 'david' %>
+  </div>
+
+  <div>
+    <%= f.label :password, 'Your pass:' %>
+    <%= f.text_field :password %>
+  </div>
+
+  <%= f.submit 'Save User' %>
+<% end %>
+
+<%= link_to 'Users', users_path, class: 'btn' %>

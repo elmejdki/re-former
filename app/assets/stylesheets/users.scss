@@ -18,6 +18,14 @@ form{
     }
   }
 
+  .field_with_errors input {
+    border: 3px red solid;
+  }
+
+  .field_with_errors label {
+    color: red;
+  }
+
   input[type='submit'] {
     background-color: white;
     outline: none;
@@ -31,4 +39,23 @@ form{
     background-color: black;
     color: white;
   }
+}
+
+.errors {
+  color: red;
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+.btn {
+  border: 1px solid blue;
+  color: black;
+  padding: 5px 0px;
+  border-radius: 10px;
+  background-color: white;
+  display: block;
+  width: 150px;
+  margin-top: 5px;
+  text-align: center;
+  text-decoration: none;
 }

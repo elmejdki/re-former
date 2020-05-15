@@ -43,19 +43,4 @@
   <%= submit_tag 'Create User' %>
 <% end %>
  -->
- <%= form_for @user do |f| %>
-  <div>
-    <%= f.label :email, 'Your email:' %>
-    <%= f.email_field :email, placeholder: 'I don\'t know' %>
-  </div>
-  <div>
-    <%= f.label :username, 'Your name:' %>
-    <%= f.text_field :username, placeholder: 'I don\'t know, either' %>
-  </div>
-  <div>
-    <%= f.label :password, 'Your pass:' %>
-    <%= f.text_field :password %>
-  </div>
-    <%= f.submit 'Create a User' %>
-
- <% end %>
+<%= render 'form' %>
